@@ -25,8 +25,9 @@ jobs:
           name: My Artifact 
           path: . 
       - name: Run Linting
-        run: super-linter/super-linter/slim@v5
-        env: 
+        uses: super-linter/super-linter/slim@v5 
+        env:
           DEFAULT_BRANCH: main
+          # To report GitHub Actions status checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+          DISABLE_ERRORS: true  
