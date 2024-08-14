@@ -52,7 +52,7 @@ jobs:
       - name: upload docker
         uses: actions/upload-artifact@v4
         with: 
-          name: docker
+          name: docker image
           path: . 
   Component-test: 
     runs-on: ubuntu-latest 
